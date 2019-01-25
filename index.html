@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Register</title>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP"
+        crossorigin="anonymous">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="mb-4">
+        <div class="container">
+            <a href="#">
+                <strong><i class="fas fa-volume-up"></i>Registration</strong>
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+
+            <div class="form-container mb-5 shadow p-3">
+                <!-- Form -->
+                <form id="myForm" class="needs-validation" action="/validReg.html" novalidate>
+
+                    <!-- Form Header -->
+                    <h4 class="mb-4"><i class="fas fa-user mr-2"></i>Personal Information</h4>
+
+                    <!-- Personal Information -->
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label for="firstName">First Name</label>
+                            <input id="firstName" data-id="firstName" class="form-control" type="text" required>
+                            <div id="firstName-invalid-feedback" class="invalid-feedback">
+                                You must enter your first name
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 mb-3">
+                            <label for="lastName">Last Name</label>
+                            <input id="lastName" data-id="lastName" class="form-control" type="text" required>
+                            <div id="lastName-invalid-feedback" class="invalid-feedback">
+                                You must enter your last name
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Radio buttons -->
+                    <div id="gender" class="d-block my-3 mb-4">
+                        <div class="custom-control custom-radio">
+                            <input id="female" type="radio" name="radioGender" class="custom-control-input" required>
+                            <label for="female" class="custom-control-label">Female</label>
+                        </div>
+                        <div class="custom-control custom-radio">
+                            <input id="male" type="radio" name="radioGender" class="custom-control-input" required>
+                            <label for="male" class="custom-control-label">Male</label>
+                        </div>
+                        <div class="custom-control custom-radio">
+                            <input id="other" type="radio" name="radioGender" class="custom-control-input" required>
+                            <label for="other" class="custom-control-label">Other</label>
+                            <div class="invalid-feedback">
+                                You must choose a gender
+                            </div>
+                        </div>
+                        
+                    </div>
+
+                    <!-- Email and password -->
+                    <div class="row">
+                        <div class="col-md-12 mb-3">
+                            <label for="email">Email Address</label>
+                            <div class="input-group">
+                                <input id="email" data-id="email" class="form-control" type="text" required>
+                                <div id="email-invalid-feedback" class="invalid-feedback">
+                                    You must enter an email address
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label for="poassword">Set Password</label>
+                            <div class="input-group">
+                                <input id="password" class="form-control" type="password" required>
+                                <div id="password-invalid-feedback" class="invalid-feedback">
+                                    Must contain atleast 8 characters
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-5">
+                            <label for="poassword">Confirm Password</label>
+                            <div class="input-group">
+                                <input id="confirmPassword" data-comparewith="#password" class="form-control" type="password" required>
+                                <div id="confirmPassword-invalid-feedback" class="invalid-feedback">
+                                    Must contain atleast 8 characters
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Address info -->
+                    <h4 class="mb-4"><i class="fas fa-map-marker-alt mr-2"></i>Address Information</h4>
+
+                    <div class="row">
+                        <div class="col-md-12 mb-3">
+                            <label for="address">Street Name & Number</label>
+                            <div class="input-group">
+                                <input id="address" data-id="address" class="form-control" type="text" required>
+                                <div id="address-invalid-feedback" class="invalid-feedback">
+                                    You must enter an address
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-3 mb-3">
+                            <label for="postalCode">Postal Code</label>
+                            <div class="input-group">
+                                <input id="postalCode" data-id="postalCode" class="form-control" type="text" maxlength="5" required>
+                                <div id="postalCode-invalid-feedback" class="invalid-feedback">
+                                    You must enter a ZipCode
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-9 mb-5">
+                            <label for="postalCity">City</label>
+                            <select id="postalCity" class="custom-select d-block w-100" required>
+                                <option value="">-</option>
+                                <option value="1">Stockholm</option>
+                                <option value="2">Eskilstuna</option>
+                                <option value="3">Västerås</option>
+                            </select>
+                            <div class="invalid-feedback">
+                                You must choose a City
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr>
+
+                    <!-- Text Area -->
+                    <div class="row">
+                        <div class="col-md-12 mb-5">
+                            <label for="message">
+                                <h5 class="mb-2">Write us a Question</h5>
+                            </label>
+                            <textarea class="form-control" name="message" id="message" placeholder="Enter text"></textarea>
+                        </div>
+                    </div>
+
+                    <!-- Conditions and submit button -->
+                    <div class="custom-control custom-checkbox mb-4">
+                        <input id="terms" type="checkbox" class="custom-control-input" required>
+                        <label for="terms" class="custom-control-label">I accept the <a href="#">Terms</a></label>
+                        <div class="invalid-feedback">
+                            You must agree with our user terms
+                        </div>
+                    </div>
+
+                    <button id="submit-btn"  class="btn btn-lg btn-block shadow p-3" type="submit">Register</button>
+
+                </form>
+            </div>
+        </div>
+    </main>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
